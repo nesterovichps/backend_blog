@@ -4,9 +4,10 @@
 <div align="center">
     <h1 >Добавить статью</h1>
     <form method="post">
+        {%csrf_token%}
         <label >Автор: </label >  <span>Vasia</span>
         <br>
-            <textarea name="new_post" cols="150" rows="10" placeholder="Введите текст"></textarea>
+        {{form.text_post}}
          <br>
             <button type="submit" class="btn btn-success">Добавить статью</button>
             <label >Дата: </label > <span>10.10.20</span>
