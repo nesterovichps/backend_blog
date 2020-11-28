@@ -4,7 +4,7 @@ from django.db import models
 class Blogger(models.Model):
     blogger_name=models.CharField('Автор', max_length=50) #TODO fixto dinamik
     def __str__(self):
-        return (self.blogger_name)
+        return (self. blogger_name)
 
     class Meta:
         verbose_name='Блогер'
@@ -26,8 +26,8 @@ class BlogPost(models.Model):
         verbose_name_plural = 'Посты'
 
 class Subscribe(models.Model):
-    blogger=models.ForeignKey(Blogger,on_delete=models.CASCADE)
-    subscribe=models.CharField('Подписчики', max_length=50) #TODO check on correct work
+    blogger=models.ForeignKey(Blogger, on_delete=models.CASCADE)
+    subscribe=models.CharField('Подписчики', max_length=50)
 
 
     def __str__(self):
