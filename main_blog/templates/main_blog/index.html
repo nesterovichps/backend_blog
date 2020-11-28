@@ -9,7 +9,7 @@
             <h1 align="center">Различные блоги</h1><br>
         </div>
         <div align="right">
-            <button type="submit">Подписаться\отписаться</button>
+            <button type="submit" class="btn btn-success">Подписаться\отписаться</button>
         </div>
         <br><br>
         <div style="position:relative;clear: both">
@@ -20,20 +20,24 @@
                 sit tenetur totam velit.
             </div >
             <div style=" position:absolute; left: 20%;width: 60%;  top : 0  " align="left">
-                {%for el in post_list%}
-                    <div style="clear: both;margin-both:20px">
-                        <img align="left"
-                             src="https://pypik.ru/uploads/posts/2018-09/1536907413_foto-net-no-ya-krasivaya-4.jpg"
-                             alt="blog_icon" width="100" height="100">
-                        <h6>{{el.author}}</h6>
+                {%if post_list%}
+                    {%for el in post_list%}
+                        <div style="clear: both;margin-both:20px">
+                            <img align="left"
+                                 src="https://pypik.ru/uploads/posts/2018-09/1536907413_foto-net-no-ya-krasivaya-4.jpg"
+                                 alt="blog_icon" width="100" height="100">
+                            <h6>{{el.author}}</h6>
 
-                        <div align="center">{{el.text_post}}</div>
+                            <div align="center">{{el.text_post}}</div>
+                            <br>
+                            <div align="right"><b>Дата публикации {{el.data_post}}</b></div>
                         <br>
-                        <div align="right"><b>Дата публикации {{el.data_post}}</b></div>
-                    <br>
-                    </div>
-                <br><br>
-                {%endfor%}
+                        </div>
+                    <br><br>
+                    {%endfor%}
+                {%else%}
+                    <p>Нет записей </p>
+                {%endif%}
 
 
             </div>
@@ -47,7 +51,7 @@
             </div><
 
             <div style=" clear: both" align="right" >
-            <button type="submit">Добавить статью</button>
+            <button type="submit" class="btn btn-success">Добавить статью</button>
         </div>/div>
 
 </div>

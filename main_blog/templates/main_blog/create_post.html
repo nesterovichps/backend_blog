@@ -1,0 +1,15 @@
+{% extends 'main_blog/base.html' %}
+{%block title%}create_post{% endblock %}
+{% block content%}
+<div align="center">
+    <h1 >Добавить статью</h1>
+    <form method="post">
+        <label >Автор: </label >  <span>Vasia</span>
+        <br>
+            <textarea name="new_post" cols="150" rows="10" placeholder="Введите текст"></textarea>
+         <br>
+            <button type="submit" class="btn btn-success">Добавить статью</button>
+            <label >Дата: </label > <span>10.10.20</span>
+</form>
+</div>
+{% endblock %}

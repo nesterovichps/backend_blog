@@ -11,3 +11,7 @@ def index(request):
 
 def auth(request):
     return render(request, 'main_blog/auth.html')
+
+def create_post(request):
+
+    return render(request, 'main_blog/create_post.html') #TODO fix statik data and author
