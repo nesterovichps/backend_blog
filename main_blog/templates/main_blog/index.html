@@ -3,13 +3,18 @@
 {%block title%} my_blog {% endblock %}
 {% block content%}
 <div align="center">
+    {%if request.user.username%}
+
     <div style="width: 65% ; margin : 200 px" align="center">
-        <div>
+        <div >
             <br>
             <h1 align="center">Различные блоги</h1><br>
+            <br>
+            <div align="right" >ВЫ ВОШЛИ В СИСТЕМУ КАК: {{ request.user.username }}</div>
+
         </div>
-        <div align="right">
-            <button type="submit" class="btn btn-success">Подписаться\отписаться</button>
+        <div align="right"  >
+            <a href="{% url 'logout'%}" class="btn btn-success" >Выйти</a>
         </div>
         <br><br>
         <div style="position:relative;clear: both">
@@ -60,6 +65,11 @@
             <div style="position: relative "  >
             <button type="submit" action="main_blog/create_post.html" target="_blank" class="btn btn-success">Добавить статью</button>
         </div>
+        {%else%}
+        <p></p>
+        <a href="{% url 'login'%}" class="btn btn-success">Войти</a>
+    {%endif%}
+
 
 </div>
 
