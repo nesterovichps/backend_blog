@@ -1,0 +1,9 @@
+
+{% extends 'main_blog/base.html' %}
+{%block title%} login {% endblock %}
+{% block content%}
+<div align="center">
+<p>Войти в систему.</p>
+<a href="{% url 'login'%}" class="btn btn-success">Войти</a>
+</div>
+{% endblock %}

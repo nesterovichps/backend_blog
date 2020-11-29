@@ -2,15 +2,15 @@
 {%block title%}create_post{% endblock %}
 {% block content%}
 <div align="center">
-    <h1 >Добавить статью</h1>
+    <h1>Добавить статью</h1>
     <form method="post">
         {%csrf_token%}
-        <label >Автор: </label >  <span>Vasia</span>
+        <label>Автор: </label> <span>Vasia</span>
         <br>
         {{form.text_post}}
-         <br>
-            <button type="submit" class="btn btn-success">Добавить статью</button>
-            <label >Дата: </label > <span>10.10.20</span>
-</form>
+        <br>
+        <button type="submit" class="btn btn-success">Добавить статью</button>
+        <label>Дата: </label> <span>10.10.20</span>
+    </form>
 </div>
 {% endblock %}
